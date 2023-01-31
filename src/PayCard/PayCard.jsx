@@ -1,9 +1,3 @@
-import { StyledEngineProvider } from "@mui/material";
-// import React from "react";
-// import Styles from "./PayCardStyle";
-// import { Form, Field } from "react-final-form";
-// import { useCart } from "../../../contexts/cartContext";
-// import { Form, useNavigate } from "react-router-dom";
 import React from "react";
 import { render } from "react-dom";
 import Styles from "./PayCardStyle";
@@ -15,20 +9,20 @@ import {
   formatExpirationDate,
 } from "./CardUtlis";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../../../contexts/cartContext";
 import "./Card.css";
 import { Label } from "@mui/icons-material";
+import { useCart } from "../context/cartContextProvider";
 
-const slepp = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const onSubmit = async (values) => {
-  await StyledEngineProvider(300);
+  await sleep(300);
   window.alert(JSON.stringify(values, 0, 2));
 };
 
 export const PayCard = () => {
   const navigate = useNavigate();
-  const { cart, getCart } = useCart();
+  const { cart , getCart} = useCart();
 
   console.log(cart);
 
@@ -51,36 +45,22 @@ export const PayCard = () => {
           flexDirection: "column",
         }}
       >
-        <h3
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          Форма заказа
-        </h3>
+        <h3 style={{display: "flex",flexDirection: "column" , alignItems: "center"}}>Форма заказа</h3>
         <div>
           <input type="text" name="email" placeholder="Почта (Emali)" />
         </div>
         <div>
+          
           <input type="text" name="number" placeholder="Номер телефона" />
         </div>
         <div>
           <input type="text" name="adress" placeholder="Адрес" />
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div style={{display: "flex",flexDirection: "column" , alignItems: "center"}}>
           <h5>Общая cумма</h5>
           <p>{cart.totalPrice}</p>
         </div>
       </form>
-
       <Form
         className="Form_card"
         onSubmit={onSubmit}
@@ -171,5 +151,3 @@ export const PayCard = () => {
     </Styles>
   );
 };
-
-export default PayCard;

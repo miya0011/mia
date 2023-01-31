@@ -2,11 +2,11 @@ import { Button, Grid, IconButton, Typography } from "@mui/material";
 // import { Box } from "@mui/system";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useCart } from "../../contexts/cartContext";
-import { useProducts } from "../../contexts/productsContext";
 import "./ProductDetails.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useProducts } from "../../context/productsContext";
+import { useCart } from "../../context/cartContextProvider";
 
 const ProductDetails = () => {
   const { id } = useParams();

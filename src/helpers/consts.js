@@ -10,5 +10,5 @@ export const CART = {
 
 export const JSON_API_PRODUCTS = "http://localhost:8000/products";
 
+const password = "aizi2004";
 export const ADMIN = "aizirek";
-Password: aizi2004;

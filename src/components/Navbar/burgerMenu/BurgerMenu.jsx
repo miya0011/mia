@@ -1,6 +1,5 @@
 import React from "react";
-import "./BurgerMenu.css";
-
+import "../burgerMenu/BurgerMenu.css"
 const BurgerMenu = () => {
   return (
     <div>

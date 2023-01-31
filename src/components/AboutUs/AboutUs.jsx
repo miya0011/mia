@@ -1,11 +1,11 @@
 import React from "react";
 import "./AboutUs.css";
-
+import Logo from "../../Image/Logo.jpg"
 const AboutUs = () => {
   return (
     <div className="AboutUs">
       <div className="Sidebar-About">
-        <img src={Logo} alt="Logo" width="120px" />
+        <img src={Logo} alt="logo" width="120px" />
         <br />
         <span>Главная О компании</span>
         <h2>О компании</h2>

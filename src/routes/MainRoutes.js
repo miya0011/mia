@@ -1,19 +1,18 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AboutUs from "../components/AboutUs/AboutUs";
-import { useAuth } from "../contexts/authContext";
+import { useAuth } from "../context/authContextProvider";
 import { ADMIN } from "../helpers/consts";
 import AdminPage from "../pages/AdminPage";
 import AuthPage from "../pages/AuthPage";
 import CartPage from "../pages/CartPage";
 import ContactsPage from "../pages/ContactsPage";
 import EditProductPage from "../pages/EditProductPage";
-import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
 import PayCartPage from "../pages/PayCartPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 import ProductsPage from "../pages/ProductsPage";
-
+import HomePage from "../pages/HomePage"
 const MainRoutes = () => {
   const { user } = useAuth();
   const PUBLIC_ROUTES = [
@@ -24,7 +23,7 @@ const MainRoutes = () => {
     },
     {
       link: "/auth",
-      element: <AuthPage />,
+      element: <AuthPage/>,
       id: 2,
     },
     {

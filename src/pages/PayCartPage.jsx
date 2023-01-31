@@ -1,12 +1,9 @@
 import React from "react";
-import PayCard from "../components/Products/PayCard/PayCard";
+import { PayCard } from "../PayCard/PayCard";
 
 const PayCartPage = () => {
-  return (
-    <div>
-      <PayCard />
-    </div>
-  );
+  return;
+  <PayCard />;
 };
 
 export default PayCartPage;

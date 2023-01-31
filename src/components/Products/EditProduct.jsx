@@ -1,8 +1,9 @@
+import { TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useProducts } from "../../contexts/productsContext";
-
+import { useProducts } from "../../context/productsContext";
+import Button from "@mui/material/Button";
 const EditProduct = () => {
   const navigate = useNavigate();
   const { getOneProduct, oneProduct, saveEditedProduct } = useProducts();

@@ -12,13 +12,12 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import { useAuth } from "../../contexts/authContext";
 import { Link, useNavigate } from "react-router-dom";
-import { ADMIN } from "../../helpers/consts";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import { useCart } from "../../contexts/cartContext";
-import "./Navbar.css";
+import "../Navbar/Navbar.css"
 import BurgerMenu from "./burgerMenu/BurgerMenu";
+import { useCart } from "../../context/cartContextProvider";
+import { useAuth } from "../../context/authContextProvider";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
