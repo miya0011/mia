@@ -13,8 +13,7 @@ import {
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useSearchParams } from "react-router-dom";
-import { useProducts } from "../../contexts/productsContext";
-import { Padding } from "@mui/icons-material";
+import { useProducts } from "../../context/productsContext";
 
 const Sidebar = () => {
   const { fetchByParams } = useProducts();

@@ -1,10 +1,10 @@
 import { Box, CircularProgress, Grid, Pagination } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { useProducts } from "../../contexts/productsContext";
 import Stack from "@mui/material/Stack";
 
 import ProductCard from "./ProductCard";
+import { useProducts } from "../../context/productsContext";
 
 const ProductsList = () => {
   const [searchParams, setSearchParams] = useSearchParams();

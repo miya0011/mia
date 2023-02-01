@@ -1,9 +1,7 @@
 // import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import "../../components/ContactUs/contact.css";
-import "./Contact.css";
-
+import "../ContactUs/Contact.css"
 const ContactsUs = () => {
   return (
     <Box>

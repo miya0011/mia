@@ -1,12 +1,20 @@
 import React from "react";
 import "./App.css";
-import FooterCustom from "./components/Footer/Footer";
-import AuthContextProvider from "./context/AuthContextProvider";
-import CartContextProvider from "./context/CartContextProvider";
-import MainRoutes from "./routes/MainRoutes";
+import Navbar from "./components/Navbar/Navbar";
+import AuthContextProvider from "./context/authContextProvider";
+import CartContextProvider from "./context/cartContextProvider";
+import ProductsContextProvider from "./context/productsContext";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <AuthContextProvider>
+      <ProductsContextProvider>
+        <CartContextProvider>
+          <Navbar/>
+        </CartContextProvider>
+      </ProductsContextProvider>
+    </AuthContextProvider>
+  )
 };
 
 export default App;
